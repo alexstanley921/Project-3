@@ -70,7 +70,7 @@ header p {
     content: "";
     position: absolute;
     border-bottom: 5px solid #2d3945;
-    top: 10;
+    top: 10px;
     left: 10px;
     right: 10px;
     bottom: 0px; }
