@@ -1,0 +1,193 @@
+// -------------------------
+// selectors ---------------
+// -------------------------
+
+body {
+  @include column-flex;
+  margin: auto;
+  overflow-x: hidden; // prevent horizontal scrolling
+  padding: 0 2em;
+}
+
+body:not(header) { // selects everything except header
+  max-width: $max-width;
+}
+
+header {
+  width: 100vw;
+}
+
+h1 {
+  @include title-font;
+  background: $color-1;
+  padding: 5vw 0;
+  @media (min-width: $desktop) {
+    padding: 1em 0;
+  }
+}
+
+h2 {
+  @include header-font;
+  @include item-margin;
+  display: block;
+  text-align: center;
+  max-width: $max-width;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header p {
+  @include default-font;
+  @include section-line;
+  margin-top: 2vw;
+  display: block;
+  text-align: center;
+  max-width: $max-width;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2vw;
+  padding-bottom: 7vw;
+  @media (min-width: $desktop) {
+    margin-top: .5em;
+    margin-bottom: 1.5em;
+    padding-bottom: 2em;
+  }
+}
+
+footer {
+  margin-bottom: 2em;
+  @include item-margin;
+}
+
+footer p { // selects footer paragraph
+  @include sub-font;
+}
+
+// --------------- Form Styles
+
+form { // selects entire form
+  width: 100%;
+}
+
+fieldset {
+  @include section-margin;
+  display: inline-block;
+  padding: 0;
+  width: 100%;
+  border: none;
+}
+
+span {
+  @include line;
+}
+
+legend { // selects legend
+  @include header-font;
+  @include title-margin;
+}
+
+// Label Selectors
+
+label {
+
+}
+
+label[for] { // selects all labels that have inputs
+  @include default-font;
+  cursor: pointer;
+
+  @media (min-width: $desktop) {
+
+  }
+}
+
+label:not([for]) { // selects labels that don't have inputs
+  @include default-font;
+  @include item-margin;
+  display: block;
+  font-weight: bold;
+}
+
+form :nth-child(1) label { // selects labels from first section
+  @include item-margin;
+  display: block;
+  @media (min-width: $desktop) {
+    @include reset-margin;
+    display: inline-block;
+    width: 30%;
+  }
+
+}
+
+form :nth-child(3) label[for] { // selects labels from second section with inputs
+  @include item-margin;
+  display: inline-block;
+  width: 90%;
+}
+
+// Input Selectors
+
+form :nth-child(1) input { // selects all inputs in first section
+  @include text-input-styles;
+  @include input-font;
+  display: block;
+  width: 100%;
+  margin-top: 2vw;
+  @media (min-width: $desktop) {
+    @include item-margin;
+    display: inline-block;
+    width: 65%;
+    margin-left: auto;
+  }
+}
+
+form :nth-child(3) input { // selects all inputs in the second section
+  display: inline-block;
+  margin-left: 2%;
+  margin-right: 2%;
+  text-align: center;
+}
+
+select { // selects the select input
+  @include select-input-styles;
+  @include input-font;
+  display: inline-block;
+  width: 100%;
+  margin-top: 2vw;
+  @media (min-width: $desktop) {
+    @include item-margin;
+    width: 65%;
+    margin-left: auto;
+  }
+}
+
+#zip {
+  -webkit-appearance: textfield;
+  @media (min-width: $desktop) {
+    width: 30%;
+  }
+
+}
+
+textarea {
+  @include text-input-styles;
+  @include item-margin;
+  @include title-margin;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-height: 10em;
+}
+
+button { // selects all form buttons
+ @include item-margin;
+ @include title-margin;
+ @include header-font;
+ @include submit-button-styles;
+ width: 100%;
+}
+
+::placeholder {
+  @include sub-font;
+  text-align: right;
+}

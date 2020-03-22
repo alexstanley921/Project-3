@@ -1,0 +1,351 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  overflow-x: hidden;
+  padding: 0 2em; }
+
+body:not(header) {
+  max-width: 600px; }
+
+header {
+  width: 100vw; }
+
+h1 {
+  font-family: "Merriweather", serif;
+  color: white;
+  font-style: normal;
+  text-transform: uppercase;
+  font-weight: 900;
+  text-align: center;
+  font-size: 4vw;
+  background: #2d3945;
+  padding: 5vw 0; }
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 2em; } }
+  @media (min-width: 768px) {
+    h1 {
+      padding: 1em 0; } }
+
+h2 {
+  font-family: "Merriweather", serif;
+  color: #2d3945;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 5vw;
+  margin-top: 6vw;
+  display: block;
+  text-align: center;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto; }
+  @media (min-width: 768px) {
+    h2 {
+      font-size: 1.25em; } }
+  @media (min-width: 768px) {
+    h2 {
+      margin-top: .6em; } }
+
+header p {
+  font-family: "Merriweather", serif;
+  color: rgba(0, 0, 0, 0.4);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 4vw;
+  position: relative;
+  margin-top: 2vw;
+  display: block;
+  text-align: center;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2vw;
+  padding-bottom: 7vw; }
+  @media (min-width: 768px) {
+    header p {
+      font-size: 1em; } }
+  header p::after {
+    content: "";
+    position: absolute;
+    border-bottom: 5px solid #2d3945;
+    top: 10;
+    left: 10px;
+    right: 10px;
+    bottom: 0px; }
+  header p::before {
+    content: "";
+    position: absolute;
+    border-bottom: 2px solid #2d3945;
+    top: 0;
+    left: 10px;
+    right: 10px;
+    bottom: -10px; }
+  @media (min-width: 768px) {
+    header p {
+      margin-top: .5em;
+      margin-bottom: 1.5em;
+      padding-bottom: 2em; } }
+
+footer {
+  margin-bottom: 2em;
+  margin-top: 6vw; }
+  @media (min-width: 768px) {
+    footer {
+      margin-top: .6em; } }
+
+footer p {
+  font-family: "Merriweather", serif;
+  color: rgba(0, 0, 0, 0.4);
+  font-style: italic;
+  font-weight: 400;
+  text-transform: capitalize;
+  font-size: 4vw; }
+  @media (min-width: 768px) {
+    footer p {
+      font-size: 1em; } }
+
+form {
+  width: 100%; }
+
+fieldset {
+  margin-top: 10vw;
+  display: inline-block;
+  padding: 0;
+  width: 100%;
+  border: none; }
+  @media (min-width: 768px) {
+    fieldset {
+      margin-top: 1em; } }
+
+span {
+  border-bottom: 2px solid #2d3945;
+  display: inline-block;
+  width: 100%;
+  margin-top: 3em; }
+
+legend {
+  font-family: "Merriweather", serif;
+  color: #2d3945;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 5vw;
+  margin-bottom: 0; }
+  @media (min-width: 768px) {
+    legend {
+      font-size: 1.25em; } }
+  @media (min-width: 768px) {
+    legend {
+      margin-bottom: .75em; } }
+
+label[for] {
+  font-family: "Merriweather", serif;
+  color: rgba(0, 0, 0, 0.4);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 4vw;
+  cursor: pointer; }
+  @media (min-width: 768px) {
+    label[for] {
+      font-size: 1em; } }
+
+label:not([for]) {
+  font-family: "Merriweather", serif;
+  color: rgba(0, 0, 0, 0.4);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 4vw;
+  margin-top: 6vw;
+  display: block;
+  font-weight: bold; }
+  @media (min-width: 768px) {
+    label:not([for]) {
+      font-size: 1em; } }
+  @media (min-width: 768px) {
+    label:not([for]) {
+      margin-top: .6em; } }
+
+form :nth-child(1) label {
+  margin-top: 6vw;
+  display: block; }
+  @media (min-width: 768px) {
+    form :nth-child(1) label {
+      margin-top: .6em; } }
+  @media (min-width: 768px) {
+    form :nth-child(1) label {
+      margin-top: 0;
+      display: inline-block;
+      width: 30%; } }
+
+form :nth-child(3) label[for] {
+  margin-top: 6vw;
+  display: inline-block;
+  width: 90%; }
+  @media (min-width: 768px) {
+    form :nth-child(3) label[for] {
+      margin-top: .6em; } }
+
+form :nth-child(1) input {
+  background: #eff0f1;
+  border: none;
+  outline: none;
+  border-radius: .25em;
+  transition: all 0.15s ease-out;
+  padding: 4vw 3vw;
+  font-family: "Merriweather", serif;
+  color: black;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 4vw;
+  display: block;
+  width: 100%;
+  margin-top: 2vw; }
+  form :nth-child(1) input:focus {
+    box-shadow: inset 0 0 5px #2d3945; }
+  form :nth-child(1) input:hover {
+    background: #e1e3e5; }
+  @media (min-width: 768px) {
+    form :nth-child(1) input {
+      padding: 1.25em 1em; } }
+  @media (min-width: 768px) {
+    form :nth-child(1) input {
+      font-size: 1em; } }
+  @media (min-width: 768px) {
+    form :nth-child(1) input {
+      margin-top: 6vw;
+      display: inline-block;
+      width: 65%;
+      margin-left: auto; } }
+  @media (min-width: 768px) and (min-width: 768px) {
+    form :nth-child(1) input {
+      margin-top: .6em; } }
+
+form :nth-child(3) input {
+  display: inline-block;
+  margin-left: 2%;
+  margin-right: 2%;
+  text-align: center; }
+
+select {
+  border: none;
+  outline: none;
+  border-radius: .25em;
+  transition: all 0.15s ease-out;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: url("../imgs/select-arrow.svg") #eff0f1;
+  background-repeat: no-repeat;
+  background-size: 30% 30%;
+  background-position: right -1em center;
+  padding: 4vw 3vw;
+  font-family: "Merriweather", serif;
+  color: black;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 4vw;
+  display: inline-block;
+  width: 100%;
+  margin-top: 2vw; }
+  select:focus {
+    box-shadow: inset 0 0 5px #2d3945; }
+  select:hover {
+    background: #e1e3e5;
+    background: url("../imgs/select-arrow.svg") #eff0f1;
+    background-repeat: no-repeat;
+    background-size: 30% 30%;
+    background-position: right -1em center; }
+  @media (min-width: 768px) {
+    select {
+      padding: 1.25em 1em; } }
+  @media (min-width: 768px) {
+    select {
+      font-size: 1em; } }
+  @media (min-width: 768px) {
+    select {
+      margin-top: 6vw;
+      width: 65%;
+      margin-left: auto; } }
+  @media (min-width: 768px) and (min-width: 768px) {
+    select {
+      margin-top: .6em; } }
+
+#zip {
+  -webkit-appearance: textfield; }
+  @media (min-width: 768px) {
+    #zip {
+      width: 30%; } }
+
+textarea {
+  background: #eff0f1;
+  border: none;
+  outline: none;
+  border-radius: .25em;
+  transition: all 0.15s ease-out;
+  padding: 4vw 3vw;
+  margin-top: 6vw;
+  margin-bottom: 0;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  min-height: 10em; }
+  textarea:focus {
+    box-shadow: inset 0 0 5px #2d3945; }
+  textarea:hover {
+    background: #e1e3e5; }
+  @media (min-width: 768px) {
+    textarea {
+      padding: 1.25em 1em; } }
+  @media (min-width: 768px) {
+    textarea {
+      margin-top: .6em; } }
+  @media (min-width: 768px) {
+    textarea {
+      margin-bottom: .75em; } }
+
+button {
+  margin-top: 6vw;
+  margin-bottom: 0;
+  font-family: "Merriweather", serif;
+  color: #2d3945;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 5vw;
+  border: none;
+  border-radius: .25em;
+  background: #4ebbb5;
+  color: white;
+  outline: none;
+  padding: 5vw 0;
+  width: 100%; }
+  @media (min-width: 768px) {
+    button {
+      margin-top: .6em; } }
+  @media (min-width: 768px) {
+    button {
+      margin-bottom: .75em; } }
+  @media (min-width: 768px) {
+    button {
+      font-size: 1.25em; } }
+  button:hover {
+    background: #42ada7; }
+  button:active {
+    background: #348884; }
+  @media (min-width: 768px) {
+    button {
+      padding: 1em 0; } }
+
+::placeholder {
+  font-family: "Merriweather", serif;
+  color: rgba(0, 0, 0, 0.4);
+  font-style: italic;
+  font-weight: 400;
+  text-transform: capitalize;
+  font-size: 4vw;
+  text-align: right; }
+  @media (min-width: 768px) {
+    ::placeholder {
+      font-size: 1em; } }
+
+/*# sourceMappingURL=style.css.map */

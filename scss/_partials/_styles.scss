@@ -1,0 +1,227 @@
+// -------------------------
+// Variables ---------------
+// -------------------------
+$desktop: 768px;
+$max-width: 600px;
+
+$font-family: 'Merriweather', serif;
+
+$transition-speed: .15s ease-out;
+
+$color-1: #2d3945;
+$color-2: #eff0f1;
+$color-3: rgba(0,0,0, .4);
+$color-4: #4ebbb5;
+
+// -------------------------
+// Mixins  -----------------
+// -------------------------
+
+  // Structure
+
+@mixin column-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@mixin section-line {
+  position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      border-bottom: 5px solid $color-1;
+      top: 10;
+      left: 10px;
+      right: 10px;
+      bottom: 0px;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      border-bottom: 2px solid $color-1;
+      top: 0;
+      left: 10px;
+      right: 10px;
+      bottom: -10px;
+    }
+  @media (min-width: $desktop) {
+
+  }
+}
+
+@mixin line {
+  border-bottom: 2px solid $color-1;
+  display: inline-block;
+  width: 100%;
+  margin-top: 3em;
+}
+
+// Margins
+
+@mixin reset-margin {
+  margin-top: 0;
+}
+
+@mixin item-margin {
+  margin-top: 6vw;
+  @media (min-width: $desktop) {
+    margin-top: .6em;
+  }
+}
+
+@mixin title-margin {
+  margin-bottom: 0;
+  @media (min-width: $desktop) {
+    margin-bottom: .75em;
+  }
+}
+
+@mixin section-margin {
+  margin-top: 10vw;
+  @media (min-width: $desktop) {
+    margin-top: 1em;
+  }
+}
+
+  // font mixins
+@mixin default-font {
+  font-family: $font-family;
+  color: $color-3;
+  font-style: normal;
+  font-weight: 400;
+  // ABOVE - media independent code
+  // BELOW - media dependent code
+  font-size: 4vw;
+  @media (min-width: $desktop) {
+    font-size: 1em;
+  }
+}
+
+@mixin header-font {
+  font-family: $font-family;
+  color: $color-1;
+  font-style: normal;
+  font-weight: 900;
+
+  // ABOVE - media independent code
+  // BELOW - media dependent code
+  font-size: 5vw;
+  @media (min-width: $desktop) {
+    font-size: 1.25em;
+  }
+}
+
+@mixin title-font {
+  font-family: $font-family;
+  color: white;
+  font-style: normal;
+  text-transform: uppercase;
+  font-weight: 900;
+  text-align: center;
+  // ABOVE - media independent code
+  // BELOW - media dependent code
+  font-size: 4vw;
+  @media (min-width: $desktop) {
+    font-size: 2em;
+  }
+}
+
+@mixin sub-font {
+  font-family: $font-family;
+  color: $color-3;
+  font-style: italic;
+  font-weight: 400;
+  text-transform: capitalize;
+  // ABOVE - media independent code
+  // BELOW - media dependent code
+  font-size: 4vw;
+  @media (min-width: $desktop) {
+    font-size: 1em;
+  }
+}
+
+@mixin input-font {
+  font-family: $font-family;
+  color: black;
+  font-style: normal;
+  font-weight: 400;
+  // ABOVE - media independent code
+  // BELOW - media dependent code
+  font-size: 4vw;
+  @media (min-width: $desktop) {
+    font-size: 1em;
+  }
+}
+
+  // Style Mixins
+
+@mixin text-input-styles {
+  background: $color-2;
+  border: none;
+  outline: none;
+  border-radius: .25em;
+  transition: all $transition-speed;
+  &:focus {
+    box-shadow: inset 0 0 5px $color-1;
+  }
+  &:hover {
+    background: darken($color-2, 5%);
+  }
+  // ABOVE - media independent code
+  // BELOW - media dependent code
+  padding: 4vw 3vw;
+  @media (min-width: $desktop) {
+    padding: 1.25em 1em;
+  }
+}
+
+@mixin select-input-styles {
+  border: none;
+  outline: none;
+  border-radius: .25em;
+  transition: all $transition-speed;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: url('../imgs/select-arrow.svg') $color-2;
+  background-repeat: no-repeat;
+  background-size: 30% 30%;
+  background-position: right -1em center;
+  &:focus {
+    box-shadow: inset 0 0 5px $color-1;
+  }
+  &:hover {
+    background: darken($color-2, 5%);
+    background: url('../imgs/select-arrow.svg') $color-2;
+    background-repeat: no-repeat;
+    background-size: 30% 30%;
+    background-position: right -1em center;
+  }
+  // ABOVE - media independent code
+  // BELOW - media dependent code
+  padding: 4vw 3vw;
+  @media (min-width: $desktop) {
+    padding: 1.25em 1em;
+  }
+}
+
+@mixin submit-button-styles {
+  border: none;
+  border-radius: .25em;
+  background: $color-4;
+  color: white;
+  outline: none;
+  &:hover {
+    background: darken($color-4, 5%);
+  }
+  &:active {
+    background: darken($color-4, 15%);
+  }
+  // ABOVE - media independent code
+  // BELOW - media dependent code
+  padding: 5vw 0;
+  @media (min-width: $desktop) {
+    padding: 1em 0;
+  }
+}

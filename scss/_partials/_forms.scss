@@ -1,0 +1,197 @@
+fieldset { // Selects all Fieldsets
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  border: none;
+  // ABOVE - media independent code
+  // BELOW - media dependent code
+  @media (min-width: $desktop) {
+
+  }
+
+  & :nth-child(1n) { // selects the first children of all
+    // ABOVE - media independent code
+    // BELOW - media dependent code
+    @media (min-width: $desktop) {
+
+    }
+
+  }
+}
+
+fieldset:nth-child(1) { // selects the 1st fieldset
+  // ABOVE - media independent code
+  // BELOW - media dependent code
+  border-bottom: 2px solid $prime-color;
+  padding-bottom: 50px;
+  @media (min-width: $desktop) {
+
+  }
+
+  label { // selects lv. 1 of children in fieldset
+    cursor: pointer;
+    // ABOVE - media independent code
+    // BELOW - media dependent code
+    flex-basis: 100%;
+    @media (min-width: $desktop) {
+      flex-basis: 30%;
+    }
+
+
+  }
+
+  input, select {
+    // ABOVE - media independent code
+    // BELOW - media dependent code
+    flex-basis: 100%;
+    margin-top: -2.5vw;
+    margin-right: 0;
+    padding: 4vw 3vw;
+    border-radius: .5em;
+    background: $sec-color;
+    border: none;
+    @media (min-width: $desktop) {
+      flex-basis: 70%;
+      margin-top: 0;
+      padding: 1em 1em;
+    }
+
+    &:hover {
+      background: rgba(0,0,0, .1);
+    }
+
+    &:focus {
+      box-shadow: inset 0 0 5px $prime-color;
+    }
+
+    &:invalid {
+      box-shadow: inset 0 0 5px red;
+    }
+  }
+
+  input {
+    // ABOVE - media independent code
+    // BELOW - media dependent code
+    transition: all .1s ease-out;
+    @media (min-width: $desktop) {
+
+    }
+  }
+
+
+  select {
+    transition: none;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url('../imgs/select-arrow.svg') $sec-color;
+    background-repeat: no-repeat;
+    background-size: 50% 50%;
+    background-position: right -5em center;
+    @media (min-width: $desktop) {
+      flex-basis: 70%;
+      padding: 1em 1em;
+    }
+
+    &:hover {
+      background: url('../imgs/select-arrow.svg') rgba(0,0,0, .1);
+      background-repeat: no-repeat;
+      background-size: 50% 50%;
+      background-position: right -5em center;
+    }
+  }
+}
+
+fieldset:nth-child(2) { // selects the 2nd fieldset
+  // ABOVE - media independent code
+  // BELOW - media dependent code
+
+  @media (min-width: $desktop) {
+
+  }
+
+  input {
+    flex-basis: 10%;
+    @media (min-width: $desktop) {
+
+    }
+  }
+
+  label {
+    cursor: pointer;
+    flex-basis: 100%;
+    @media (min-width: $desktop) {
+
+    }
+
+    &:not([class="na"]) { // the labels that aren't for 'na' (not-available)
+      flex-basis: 90%;
+    }
+  }
+
+  textarea {
+    flex-basis: 100%;
+    border: none;
+    background: $sec-color;
+    padding: 3vw 2vw;
+    height: 40vw;
+    max-width: $max-width;
+    border-radius: .5em;
+    @media (min-width: $desktop) {
+      height: 10em;
+      padding: 1em 1em;
+    }
+
+    &:focus {
+      box-shadow: inset 0 0 5px $prime-color;
+    }
+
+    &:hover {
+      background: rgba(0,0,0,.1);
+    }
+  }
+
+  button {
+    flex-basis: 100%;
+    height: 15vw;
+    border: none;
+    border-radius: .5em;
+    background: $btn-color;
+    transition: background .1s ease-out;
+    @media (min-width: $desktop) {
+      height: 2.5em;
+      border-radius: .2em;
+    }
+
+    &:hover {
+      background: darken($btn-color, 5%);
+    }
+
+    &:active {
+      background: darken($btn-color, 10%);
+    }
+  }
+
+}
+
+input {
+
+  // ABOVE - media independent code
+  // BELOW - media dependent code
+
+
+    @media (min-width: $desktop) {
+
+    }
+
+
+}
+
+#zip {
+    -webkit-appearance: textfield;
+    // ABOVE - media independent code
+    // BELOW - media dependent code
+    @media (min-width: $desktop) {
+      flex-basis: 30%;
+    }
+}
