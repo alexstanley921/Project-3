@@ -21,11 +21,12 @@
         <label for="name">Full Name</label>
         <input type="text" id="name" name="name" required placeholder="required">
         <label for="email">Email Address</label>
-        <input type="text" id="email" name="email" required placeholder="Required">
+        <!-- This is where I failed the last assignment . . . type != email  -->
+        <input type="email" id="email" name="email" required placeholder="Required">
         <label for="phone">Phone Number</label>
-        <input type="tel" id="phone" name="phone">
+        <input type="tel" id="phone" name="phone" placeholder="Preferred">
         <label for="address">Street Address</label>
-        <input type="text" id="address" name="address">
+        <input type="text" id="address" name="address" placeholder="Optional">
         <label for="city">City</label>
         <input type="text" id="city" name="city">
         <label for="state">State</label>
@@ -99,19 +100,19 @@
       <span></span>
       <fieldset>
         <legend>Newsletter</legend>
-        <label class="na">Select the newsletters you would like to recieve</label>
+        <label class="na">Subscribe to newsletters</label>
           <input type="checkbox" id="html-news" name="newsletter">
           <label for="html-news">HTML News</label>
           <input type="checkbox" id="css-news" name="newsletter">
           <label for="css-news">CSS News</label>
           <input type="checkbox" id="js-news" name="newsletter">
           <label for="js-news">Javascript News</label>
-        <label class="na">Newsletter format</label>
+        <label class="na na-2">Newsletter format</label>
           <input type="radio" id="html-format" name="format">
           <label for="html-format">HTML</label>
           <input type="radio" id="text-format" name="format">
           <label for="text-format">Plain text</label>
-        <label for="comment-box">Other topics you'd like to hear about</label>
+        <label class="na-2" for="comment-box">Other topics you'd like to hear about</label>
         <textarea name="comments" id="comment-box"></textarea>
         <button type="submit">Sign Up</button>
       </fieldset>

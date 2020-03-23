@@ -12,7 +12,10 @@ $color-1: #2d3945;
 $color-2: #eff0f1;
 $color-3: rgba(0,0,0, .4);
 $color-4: #4ebbb5;
+$color-background: radial-gradient(ellipse at center, #A4E3DF, #FFFFFF); // colors based on button
 
+$body-gradient: center 98% / cover no-repeat url('../imgs/gradient-bottom-05.svg'),
+                $color-4;
 // -------------------------
 // Mixins  -----------------
 // -------------------------
@@ -45,9 +48,6 @@ $color-4: #4ebbb5;
       right: 10px;
       bottom: -10px;
     }
-  @media (min-width: $desktop) {
-
-  }
 }
 
 @mixin line {
@@ -155,6 +155,16 @@ $color-4: #4ebbb5;
 }
 
   // Style Mixins
+
+@mixin background-style {
+
+  // ABOVE - media independent code
+  // BELOW - media dependent code
+  background: $body-gradient;
+  @media (min-width: $desktop) {
+    background-image: url('../imgs/gradient-full-04.svg');
+  }
+}
 
 @mixin text-input-styles {
   background: $color-2;

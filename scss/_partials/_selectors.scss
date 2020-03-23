@@ -4,6 +4,7 @@
 
 body {
   @include column-flex;
+  @include background-style;
   margin: auto;
   overflow-x: hidden; // prevent horizontal scrolling
   padding: 0 2em;
@@ -86,24 +87,23 @@ legend { // selects legend
   @include title-margin;
 }
 
-// Label Selectors
-
-label {
+form :nth-child(3) legend { // selects legends in second section
+  margin-bottom: 5vw;
+  @media (min-width: $desktop) {
+    @include title-margin;
+  }
 
 }
+
+// Label Selectors
 
 label[for] { // selects all labels that have inputs
   @include default-font;
   cursor: pointer;
-
-  @media (min-width: $desktop) {
-
-  }
 }
 
 label:not([for]) { // selects labels that don't have inputs
   @include default-font;
-  @include item-margin;
   display: block;
   font-weight: bold;
 }
@@ -119,10 +119,24 @@ form :nth-child(1) label { // selects labels from first section
 
 }
 
-form :nth-child(3) label[for] { // selects labels from second section with inputs
+form :nth-child(3) label[for]:not(.na-2) { // selects labels from second section with inputs
   @include item-margin;
   display: inline-block;
   width: 90%;
+}
+
+.na:nth-of-type(2) {// selects the second label with class .na
+  @include section-margin; // doesn't work !!!!
+}
+
+// ********** SOS ***********
+// I couldn't get the above selector
+// to select the second item with class
+// .na so I created a css hack with .na-2
+
+.na-2 { // does what the above should do
+  @include section-margin;
+  display: block;
 }
 
 // Input Selectors

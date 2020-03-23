@@ -2,9 +2,13 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: center 98%/cover no-repeat url("../imgs/gradient-bottom-05.svg"), #4ebbb5;
   margin: auto;
   overflow-x: hidden;
   padding: 0 2em; }
+  @media (min-width: 768px) {
+    body {
+      background-image: url("../imgs/gradient-full-04.svg"); } }
 
 body:not(header) {
   max-width: 600px; }
@@ -139,6 +143,15 @@ legend {
     legend {
       margin-bottom: .75em; } }
 
+form :nth-child(3) legend {
+  margin-bottom: 5vw; }
+  @media (min-width: 768px) {
+    form :nth-child(3) legend {
+      margin-bottom: 0; } }
+  @media (min-width: 768px) and (min-width: 768px) {
+    form :nth-child(3) legend {
+      margin-bottom: .75em; } }
+
 label[for] {
   font-family: "Merriweather", serif;
   color: rgba(0, 0, 0, 0.4);
@@ -156,15 +169,11 @@ label:not([for]) {
   font-style: normal;
   font-weight: 400;
   font-size: 4vw;
-  margin-top: 6vw;
   display: block;
   font-weight: bold; }
   @media (min-width: 768px) {
     label:not([for]) {
       font-size: 1em; } }
-  @media (min-width: 768px) {
-    label:not([for]) {
-      margin-top: .6em; } }
 
 form :nth-child(1) label {
   margin-top: 6vw;
@@ -178,13 +187,26 @@ form :nth-child(1) label {
       display: inline-block;
       width: 30%; } }
 
-form :nth-child(3) label[for] {
+form :nth-child(3) label[for]:not(.na-2) {
   margin-top: 6vw;
   display: inline-block;
   width: 90%; }
   @media (min-width: 768px) {
-    form :nth-child(3) label[for] {
+    form :nth-child(3) label[for]:not(.na-2) {
       margin-top: .6em; } }
+
+.na:nth-of-type(2) {
+  margin-top: 10vw; }
+  @media (min-width: 768px) {
+    .na:nth-of-type(2) {
+      margin-top: 1em; } }
+
+.na-2 {
+  margin-top: 10vw;
+  display: block; }
+  @media (min-width: 768px) {
+    .na-2 {
+      margin-top: 1em; } }
 
 form :nth-child(1) input {
   background: #eff0f1;
